@@ -1,7 +1,5 @@
 import random
 
-
-
 # welcome text
 print("Welcome to the Guessing Number Game!")
 
