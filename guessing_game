@@ -1,0 +1,40 @@
+import random
+
+
+
+# welcome text
+print("Welcome to the Guessing Number Game!")
+
+play_again = "Y"
+
+while play_again == "Y":
+
+
+    secret_number = random.randint(1, 10)
+    user_guess = 0
+    attempt = 1
+
+    user_guess = int(input("Guess the number: "))
+
+    while user_guess != secret_number:
+    
+        if user_guess < 1: 
+            print("Invalid guess. Guess between 1-10 only")
+        elif user_guess > 10:
+            print("Invalid guess. Guess between 1-10 only")
+        elif user_guess > secret_number:
+            print("Too high bro! Try again")
+        elif user_guess < secret_number:
+            print("Too low bro! Try again")
+
+        attempt += 1
+        user_guess = int(input("Guess the number: "))
+
+    print(f"Congratulations ! the secret number is  {secret_number}") 
+    print(f"You took {attempt} attempts")
+
+
+    play_again = input("Play again? Y/N: ").strip().upper()
+
+print("Thanks for playing !")
+    
